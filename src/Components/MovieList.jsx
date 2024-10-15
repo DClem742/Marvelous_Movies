@@ -1,29 +1,35 @@
 import React from 'react';
-import './MovieList.css'; 
+import './MovieList.css';
 
-// Hardcoded array of movies
-// This array contains movie objects with properties like imdbID, Title, Year, and Poster
+// Updated hardcodedMovies array with Avengers films
 const hardcodedMovies = [
   {
-    imdbID: 'tt0111161',
-    Title: 'The Shawshank Redemption',
-    Year: '1994',
-    Poster: 'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'
+    imdbID: 'tt0848228',
+    Title: 'The Avengers',
+    Year: '2012',
+    Poster: 'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'
   },
   {
-    imdbID: 'tt0068646',
-    Title: 'The Godfather',
-    Year: '1972',
-    Poster: 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
+    imdbID: 'tt2395427',
+    Title: 'Avengers: Age of Ultron',
+    Year: '2015',
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg'
   },
   {
-    imdbID: 'tt0071562',
-    Title: 'The Godfather: Part II',
-    Year: '1974',
-    Poster: 'https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
+    imdbID: 'tt4154756',
+    Title: 'Avengers: Infinity War',
+    Year: '2018',
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg'
+  },
+  {
+    imdbID: 'tt4154796',
+    Title: 'Avengers: Endgame',
+    Year: '2019',
+    Poster: 'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg'
   }
 ];
 
+// Rest of your MovieList component remains the same
 // MovieList component definition
 function MovieList() {
   return (
