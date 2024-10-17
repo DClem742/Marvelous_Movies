@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SearchForm.css';
+import styles from './SearchForm.module.css';
 
 function SearchForm({ onSearch }) {
   const [term, setTerm] = useState('');
@@ -7,19 +7,19 @@ function SearchForm({ onSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(term);
-    setTerm(''); // This line clears the input field after search
+    setTerm('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-form">
+    <form onSubmit={handleSubmit} className={styles['search-form']}>
       <input
         type="text"
         value={term}
         onChange={(e) => setTerm(e.target.value)}
         placeholder="Enter movie title"
-        className="search-input"
+        className={styles['search-input']}
       />
-      <button type="submit" className="search-button">Search</button>
+      <button type="submit" className={styles['search-button']}>Search</button>
     </form>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
-import './MovieList.css';
+import styles from './MovieList.module.css';
 
 const API_KEY = '6ba10e55'; 
 
@@ -32,7 +32,7 @@ function MovieList({ searchTerm, onSelectMovie }) {
   }, [searchTerm]);
 
   return (
-    <div className="movie-list">
+    <div className={styles['movie-list']}>
       {movies.map((movie) => (
         <MovieCard key={movie.imdbID} movie={movie} onSelect={() => onSelectMovie(movie)} />
       ))}
