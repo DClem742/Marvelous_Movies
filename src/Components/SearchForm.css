@@ -1,0 +1,27 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+}
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e23636; /* Marvel red */
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #c11f1f; /* Darker shade of Marvel red for hover effect */
+}
