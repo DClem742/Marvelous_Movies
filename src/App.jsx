@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
 import MovieList from './Components/MovieList';
 import SearchForm from './Components/SearchForm';
 import MovieDetails from './Components/MovieDetails';
@@ -7,6 +8,12 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [audio] = useState(new Audio('Avengers_Assemble.mp3'));
+  const titleAnimation = useSpring({
+    from: { transform: 'scale(0.1)', opacity: 0 },
+    to: { transform: 'scale(1)', opacity: 1 },
+    config: { duration: 1000 }
+  });
+  
 
   useEffect(() => {
     audio.loop = true;
@@ -29,7 +36,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="centered-title">Marvelous Movies</h1>
+          <animated.h1 style={titleAnimation} className="centered-title">
+            Marvelous Movies
+          </animated.h1>
       <SearchForm onSearch={handleSearch} />
       {selectedMovie ? (
         <MovieDetails movie={selectedMovie} />
