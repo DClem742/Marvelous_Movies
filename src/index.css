@@ -12,14 +12,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 body {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #151515;
+  background: linear-gradient(45deg, #000000, #1a1a1a, #000000);
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @font-face {
   font-family: 'Avengeance';
@@ -35,9 +48,10 @@ h1 {
   color: #e62429;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 
+    3px 3px 0px #000000,
+    6px 6px 0px rgba(0, 0, 0, 0.5);
 }
-
 a {
   font-weight: 500;
   color: #e62429;
