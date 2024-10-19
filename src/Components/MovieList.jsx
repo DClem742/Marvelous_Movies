@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTrail, animated } from 'react-spring';
 import MovieCard from './MovieCard';
 import styles from './MovieList.module.css';
 
@@ -31,10 +32,21 @@ function MovieList({ searchTerm, onSelectMovie }) {
     fetchMovies();
   }, [searchTerm]);
 
+  const trail = useTrail(movies.length, {
+    from: { opacity: 0, transform: 'translate3d(0,40px,0)' },
+    to: { opacity: 1, transform: 'translate3d(0,0px,0)' },
+    config: { mass: 1, tension: 280, friction: 20 },
+  });
+
   return (
     <div className={styles['movie-list']}>
-      {movies.map((movie) => (
-        <MovieCard key={movie.imdbID} movie={movie} onSelect={() => onSelectMovie(movie)} />
+      {trail.map((props, index) => (
+        <animated.div key={movies[index].imdbID} style={props}>
+          <MovieCard
+            movie={movies[index]}
+            onSelect={() => onSelectMovie(movies[index])}
+          />
+        </animated.div>
       ))}
     </div>
   );
