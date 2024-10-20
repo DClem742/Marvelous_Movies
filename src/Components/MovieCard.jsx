@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './MovieCard.module.css';
-import { getMovieTrailer } from '../services/youtubeApi';
+import { getMovieTrailer } from './YouTubeApi';
 
 function MovieCard({ movie }) {
   const [flipped, setFlipped] = useState(false);
