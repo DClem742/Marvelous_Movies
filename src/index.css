@@ -18,12 +18,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(45deg, #000000, #1a1a1a, #000000);
+  background-image: url('wall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(45deg, #000000, #1a1a1a, #000000);
   background-size: 200% 200%;
-  animation: gradientFlow 15s ease infinite;
+  animation: gradientFlow 15s ease infinite; */
 }
 
-@keyframes gradientFlow {
+/* @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
   }
@@ -33,7 +37,7 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 @font-face {
   font-family: 'Avengeance';
   src: url('Avengeance.ttf') format('truetype');
