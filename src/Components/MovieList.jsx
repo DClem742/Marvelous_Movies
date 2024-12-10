@@ -14,13 +14,13 @@ function MovieList({ searchTerm, onSelectMovie }) {
     const fetchMovies = async () => {
       if (searchTerm) {
         // Fetch search results from OMDB API
-        const response = await fetch(`http://www.omdbapi.com/?s=${encodeURIComponent(searchTerm)}&apikey=${API_KEY}`);
+        const response = await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(searchTerm)}&apikey=${API_KEY}`);
         const data = await response.json();
         if (data.Search) {
           // Fetch detailed information for each movie
           const detailedMovies = await Promise.all(
             data.Search.map(async (movie) => {
-              const detailResponse = await fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=${API_KEY}`);
+              const detailResponse = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${API_KEY}`);
               return detailResponse.json();
             })
           );
