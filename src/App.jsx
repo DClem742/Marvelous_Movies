@@ -10,7 +10,7 @@ function App() {
   // State management for various app features
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMovie, setSelectedMovie] = useState(null);
-  const [audio] = useState(new Audio('/Marvel-Sprawl.mp3'));
+  const [audio] = useState(new Audio('/assets/Marvel-Sprawl.mp3'));
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [showMusicToggle, setShowMusicToggle] = useState(false);
 
